@@ -222,4 +222,34 @@
     <link name="${NAME_HEAD_CAMERA_PREFIX}_color_optical_frame"/>
 
   </xacro:if>
+
+
+
+  <!-- 左アーム -->
+  <!-- Gemini カメラの組み込み -->
+  <xacro:include filename="$(find sciurus17_description)/urdf/_gemini_335_336.urdf.xacro"/>
+  <!-- 固定ジョイント -->
+  <joint name="gemini_camera_mount_joint" type="fixed">
+    <parent link="l_link7"/>
+    <child link="camera_link"/>
+    <!-- 要調整：mm単位でのズレをxyz, 向きのずれをrpyで指定 -->
+    <origin xyz="0.0 0.02 0.03" rpy="0 0 1.57"/>
+  </joint>
+
+
+
+
+  <!-- 右アーム -->
+  <!-- Gemini カメラの組み込み -->
+  <!-- <xacro:include filename="$(find sciurus17_description)/urdf/gemini_335_336_camera.xacro"/> -->
+  <!-- 固定ジョイント -->
+  <!-- <joint name="gemini_camera_mount_joint" type="fixed">
+    <parent link="r_link7"/>
+    <child link="camera_link"/> -->
+    <!-- 要調整：mm単位でのズレをxyz, 向きのずれをrpyで指定 -->
+    <!-- <origin xyz="0.0 -0.032 -0.0191" rpy="-1.57 1.57 0.0"/>
+  </joint> -->
+
+
+
 </robot>
