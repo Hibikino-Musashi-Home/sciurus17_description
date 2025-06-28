@@ -277,7 +277,7 @@
   <joint name="first_shelf_joint" type="fixed">
     <parent link="base_link"/>
     <child link="first_shelf"/>
-    <origin xyz="0.0 -0.6 0.198" rpy="0 0 0"/>
+    <origin xyz="0.0 -0.6 -0.02" rpy="0 0 0"/>
   </joint>
 
   <!-- 2段目 -->
@@ -300,9 +300,9 @@
   </link>
 
   <joint name="2nd_shelf_joint" type="fixed">
-    <parent link="base_link"/>
+    <parent link="first_shelf"/>
     <child link="2nd_shelf"/>
-    <origin xyz="0.0 -0.6 -0.02" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.2" rpy="0 0 0"/>
   </joint>
 
 
@@ -326,9 +326,9 @@
   </link>
 
   <joint name="3rd_shelf_joint" type="fixed">
-    <parent link="base_link"/>
+    <parent link="2nd_shelf"/>
     <child link="3rd_shelf"/>
-    <origin xyz="0.0 -0.6 0.398" rpy="0 0 0"/>
+    <origin xyz="0.0 0.0 0.2" rpy="0 0 0"/>
   </joint>
 
 
