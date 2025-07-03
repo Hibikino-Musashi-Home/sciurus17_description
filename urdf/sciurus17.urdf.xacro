@@ -266,18 +266,18 @@
         <color rgba="01.0 1.0 0.7 1.0" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
       <geometry>
         <box size="0.95 0.454 0.0005" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
 
   <joint name="first_shelf_joint" type="fixed">
     <parent link="base_link"/>
     <child link="first_shelf"/>
-    <origin xyz="0.0 -0.6 -0.02" rpy="0 0 0"/>
+    <origin xyz="0.0 -0.45 -0.02" rpy="0 0 0"/>
   </joint>
 
   <!-- 2段目 -->
@@ -317,12 +317,12 @@
         <color rgba="01.0 1.0 0.7 1.0" />
       </material>
     </visual>
-    <collision>
+    <!-- <collision>
       <origin xyz="0.0 0.0 0.0" rpy="0 0 0" />
       <geometry>
         <box size="0.95 0.454 0.0005" />
       </geometry>
-    </collision>
+    </collision> -->
   </link>
 
   <joint name="3rd_shelf_joint" type="fixed">
